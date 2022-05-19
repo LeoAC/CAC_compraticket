@@ -14,15 +14,12 @@
                 var ndescTkt = parseFloat(0.1);                
                 var sNom = String(document.getElementById("nombre").value); 
                 var sApe = String(document.getElementById("apellido").value); 
-                var sCorreo = String(document.getElementById("correo").value);                      
-                
+                var sCorreo = String(document.getElementById("correo").value);                                      
                 if(((sNom != "")&&(sApe!="")&&(sCorreo!=""))&&((sNom != "Nombre")&&(sApe!="Apellido")&&(sCorreo!="Correo"))){
                     sNom = "";
                     sApe ="";
-                    sCorreo ="";
-                    console.log ("-----------------------");
-                    if (parseInt(ncantTkt) > 0){
-                        console.log (" if ncantTkt  : ", parseInt(ncantTkt));
+                    sCorreo ="";               
+                    if (parseInt(ncantTkt) > 0){                       
                         switch (parseInt(ndesc)){
                             case 1: // 80%
                                 ndescTkt = parseFloat(0.2);
@@ -32,10 +29,8 @@
                                 break;
                             case 3:  // 15%
                                 ndescTkt = parseFloat(0.85);                        
-                        }
-                        console.log ("DESCUENTO 2 : ", ndescTkt); 
-                        ncalTkt = ncantTkt*nvalTkt*ndescTkt
-                        console.log ("ncalTkt :",ncalTkt);
+                        }                      
+                        ncalTkt = ncantTkt*nvalTkt*ndescTkt                       
                         document.getElementById("comment").value = "Total a Pagar: $ " + ncalTkt;                           
                     }else{                
                         alert("Debe ingresar la cantidad");                
@@ -43,11 +38,8 @@
                 }else{
                     alert("Por favor completar los campos faltantes");  
                 }                 
-            }    
-            
-            function borrar(){
-                console.log ("entro a borrar ");                
-              
+            }                
+            function borrar(){                                         
                document.getElementById("nombre").value = "Nombre"; 
                document.getElementById("apellido").value = "Apellido"; 
                document.getElementById("correo").value = "Correo"; 
@@ -56,6 +48,7 @@
                document.getElementById("comment").value ="Total a Pagar: $ ";                                     
             }
         </script>
+        <!--
         <style>        
         footer{
             position: absolute;
@@ -63,6 +56,7 @@
             width:100%;    
         }
         </style>
+        -->
     </head>
     <body>    
 
