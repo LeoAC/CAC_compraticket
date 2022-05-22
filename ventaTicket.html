@@ -56,14 +56,7 @@
                document.getElementById("categoria").value = "1"; 
                document.getElementById("comment").value ="Total a Pagar: $ ";                                     
             }
-        </script>
-        <style>        
-        footer{
-            position: absolute;
-            bottom:0;
-            width:100%;    
-        }
-        </style>
+        </script>  
     </head>
     <body>    
         <!-- add NAVBAR -->       
@@ -102,7 +95,7 @@
         <div class="container"><!-- add 3 cards -->              
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">       
-                    <div class="card h-100">
+                    <div class="card-img-top1">
                         <div class="card-body text-center border border-primary">
                             <h5 class="card-title fs-4">Estudiante</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -112,7 +105,7 @@
                     </div>                 
                 </div>    
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card-img-top2">
                         <div class="card-body text-center border border-info">
                             <h5 class="card-title fs-4">Trainee</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -122,7 +115,7 @@
                     </div>
                 </div>   
                 <div class="col">                 
-                    <div class="card h-100">
+                    <div class="card-img-top3">
                         <div class="card-body text-center border border-warning">
                             <h5 class="card-title fs-4">Junior</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -138,7 +131,8 @@
             <p class="text-center">VENTA<h1 class="text-center">VALOR DE TICKET $200</h2></p>                      
         </div>                         
         <br>
-        <div class="container">           
+        <div class="container" style="width: 50%;height:50%;">           
+        <form action="https://formspree.io/f/mnqwbqan" method="POST" target="_blank">
             <div class="row">
                 <div class="col">
                     <input type="nombre" class="form-control" id="nombre" placeholder="Nombre">
@@ -180,7 +174,8 @@
                 <div class="col">        
                     <button type="button" id="resumen" onclick="calTicket(document.getElementById('cantidad').value,document.getElementById('categoria').value);" style="width:100%; border-color: rgb(152,222,57); background-color:rgb(152,222,57);" class="btn btn-success">Resumen</button>
                 </div>                  
-            </div>   
+            </div>          
+        </form> 
         </div>
         <br>        
     </body>
