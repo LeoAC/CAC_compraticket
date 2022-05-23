@@ -39,7 +39,7 @@
                 }else{
                     alert("Por favor completar los campos faltantes");  
                 }                 
-            }                
+            };                
             function borrar(){                                         
                document.getElementById("nombre").value = "Nombre"; 
                document.getElementById("apellido").value = "Apellido"; 
@@ -47,7 +47,7 @@
                document.getElementById("cantidad").value = "Cantidad"; 
                document.getElementById("categoria").value = "1"; 
                document.getElementById("comment").value ="Total a Pagar: $ ";                                     
-            }
+            };
         </script>     
     </head>
     <body>    
@@ -82,20 +82,10 @@
                     <div class="col p-4"></div>
                 </nav>
             </div>
-        </div>   
-        <div class="col">                 
-            <div class="card h-100">
-                <div class="card-body text-center border border-warning">
-                    <h5 class="card-title fs-4">Junior</h5>
-                    <p class="card-text">Tienen un descuento</p>
-                    <p class="card-text fs-4 fw-bold">15%</p>
-                    <p class="card-text">* presentar documentación</p> 
-                </div>
-            </div>                             
-        </div>              
+        </div>                     
         <br>
         <br>   
-        <div class="container" style="width: 50%;height:50%;"><!-- add 3 cards -->              
+        <div class="container" style="width: 75%;height:75%;"><!-- add 3 cards -->              
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">       
                     <div class="card h-100 card-img-top1">
@@ -134,51 +124,49 @@
             <p class="text-center">VENTA<h1 class="text-center">VALOR DE TICKET $200</h2></p>                      
         </div>                         
         <br>        
-        <div class="container" style="width: 50%;height:50%;">
-            <form action="" method="POST" target="_blank"> <!-- Aca verifico con un servidor de formulario-->               
-                <div class="row">
-                    <div class="col">
-                        <input type="nombre" class="form-control" id="nombre" placeholder="Nombre">
-                    </div>         
-                    <div class="col">
-                        <input type="apellido" class="form-control" id="apellido" name="apellido" placeholder="Apellido">        
-                    </div>   
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <input type="correo" class="form-control" id="correo" name="correo" placeholder="Correo">
-                    </div>                     
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                        <input type="cantidad" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad">
-                    </div>         
-                    <div class="col">
-                        <label for="exampleInputEmail1" class="form-label">Categoria</label>
-                        <select class="form-select" id="categoria" aria-label="Default select example">          
-                            <option selected value="1">Estudiante</option>
-                            <option value="2">Trainee</option>
-                            <option value="3">Junior</option>
-                        </select>        
-                    </div>   
-                </div>                                                             
-                <br>
+        <div class="container" style="width: 75%;height:75%;">                         
+            <div class="row">
                 <div class="col">
-                    <input type="correo" id="comment" class="form-control" id="correo" name="comment" placeholder="Correo" value="Total a Pagar: $ " style="border-color:rgb(180, 207, 243); background-color: rgb(180, 207, 243)" readonly>
-                </div>    
-                <br>
-                <div class="row">                   
-                    <div class="col">                        
-                        <button type="button" id="borrar" onclick="borrar();" style="width:100%;border-color: rgb(152,222,57); background-color:rgb(152,222,57);" class="btn btn-success">Borrar</button>
-                    </div>                                    
-                    <div class="col">        
-                        <button type="button" id="resumen" onclick="calTicket(document.getElementById('cantidad').value,document.getElementById('categoria').value);" style="width:100%; border-color: rgb(152,222,57); background-color:rgb(152,222,57);" class="btn btn-success">Resumen</button>
-                    </div>                  
-                </div>          
-            </form> 
+                    <input type="nombre" class="form-control" id="nombre" placeholder="Nombre">
+                </div>         
+                <div class="col">
+                    <input type="apellido" class="form-control" id="apellido" name="apellido" placeholder="Apellido">        
+                </div>   
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <input type="correo" class="form-control" id="correo" name="correo" placeholder="Correo">
+                </div>                     
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                    <input type="cantidad" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad">
+                </div>         
+                <div class="col">
+                    <label for="exampleInputEmail1" class="form-label">Categoria</label>
+                    <select class="form-select" id="categoria" aria-label="Default select example">          
+                        <option selected value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                    </select>        
+                </div>   
+            </div>                                                             
+            <br>
+            <div class="col">
+                <input type="correo" id="comment" class="form-control" id="correo" name="comment" placeholder="Correo" value="Total a Pagar: $ " style="border-color:rgb(180, 207, 243); background-color: rgb(180, 207, 243)" readonly>
+            </div>    
+            <br>
+            <div class="row">                   
+                <div class="col">                        
+                    <button type="button" id="borrar" onclick="borrar();" style="width:100%;border-color: rgb(152,222,57); background-color:rgb(152,222,57);" class="btn btn-success">Borrar</button>
+                </div>                                    
+                <div class="col">        
+                    <button type="button" id="resumen" onclick="calTicket(document.getElementById('cantidad').value,document.getElementById('categoria').value);" style="width:100%; border-color: rgb(152,222,57); background-color:rgb(152,222,57);" class="btn btn-success">Resumen</button>
+                </div>                  
+            </div>                    
         </div>         
         <br>  
         <br>  
